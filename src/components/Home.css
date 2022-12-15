@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* .carousel-slide {
+    width: 100%;
+    height: 60vh;
+
+} */
+
+.carousel-slide-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.left {
+    padding-left: 25px;
+}
+
+
+.head2 {
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: left;
+    text-shadow: 3px 3px 15px #4d9ef4;
+}
+
+.carousel-para {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.left button {
+    margin-top: 10px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    float: left;
+    text-transform: capitalize;
+}
+
+.carousel .control-dots {
+    display: none;
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+    margin: auto;
+    max-width: 1200px;
+    width: 100%;
+    height: fit-content;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+}
+
+
+.card-design {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    height: 120px;
+    width: 300px;
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+    box-shadow: 2px 2px 112px 10px rgb(239 239 255 / 14%), inset -4px -4px 16px 0px rgb(239 239 255 / 60%), inset 0px 11px 28px 0px rgb(60 90 255);
+    /* box-shadow: 1px 1px 10px 7px rgb(78 78 181 / 21%), inset 1px 1px 12px 2px rgb(239 239 255 / 60%), inset 0px 11px 28px 0px rgb(0 4 154); */
+}
+
+.card-head {
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.card-para {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 5px;
+
+}
+
+.card-sym {
+    font-size: 50px;
+    font-weight: 900;
+    margin-top: 5px;
+    margin: 10px;
+    opacity: .8;
+}

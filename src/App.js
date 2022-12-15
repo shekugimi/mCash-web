@@ -1,41 +1,42 @@
-import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import AdegateOffer from "./components/subcomponents/AdgateOffer"
+import AdscendOffer from "./components/subcomponents/AdscendOffer"
+import BuzzOffer from "./components/subcomponents/BuzzOffers"
+import LimitedOffer from "./components/subcomponents/LimitedOffers"
+import TaskOffers from "./components/subcomponents/TaskOffers"
+import Error from "./components/subcomponents/Error"
+import Redeem from "./components/pages/Redeem";
+import Transaction from "./components/pages/Transaction";
+import Invite from "./components/pages/Invite";
+import Rateus from "./components/pages/Rateus";
+import HelpSupport from "./components/pages/HelpSupport";
+import PrivacyPolicy from "./components/pages/PrivacyPolicy";
+
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
-    </ChakraProvider>
+    <>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/adegate-offer" element={<AdegateOffer />} />
+          <Route path="/adscend-offer" element={<AdscendOffer />} />
+          <Route path="/buzz-offer" element={<BuzzOffer />} />
+          <Route path="/limited-offer" element={<LimitedOffer />} />
+          <Route path="/task-offer" element={<TaskOffers />} />
+          <Route path="/redeem" element={<Redeem />} />
+          <Route path="/transaction" element={<Transaction />} />
+          <Route path="/invite" element={<Invite />} />
+          <Route path="/rate-us" element={<Rateus />} />
+          <Route path="/help-support" element={<HelpSupport />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="*" element={<Error />} /> nnnnnnn
+        </Routes>
+      </Router>
+    </>
   );
 }
 
